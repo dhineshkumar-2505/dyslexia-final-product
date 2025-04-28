@@ -1,0 +1,296 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #6e5b94, #c3c3c3);
+    color: #ffffff;
+    border-radius: 10px 10px 0 0;
+    position: relative; /* For absolute positioning of the button */
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+/* Games Button */
+.games-button {
+    position: absolute;
+    top: 20px; /* Positioning from the top */
+    right: 20px; /* Positioning from the right */
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #ff6347; /* Tomato color */
+    border: none;
+    border-radius: 50px; /* Rounded button */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.games-button:hover {
+    background-color: #e55339; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.customize-section {
+    width: 30%;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.customize-section h2 {
+    margin-bottom: 15px;
+}
+
+.customize-section label {
+    display: block;
+    margin-top: 10px;
+}
+
+.customize-section input[type="range"],
+.customize-section select,
+.customize-section input[type="color"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.upload-section {
+    margin-top: 20px;
+}
+
+.upload-section button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.upload-section button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Reading Section */
+.reading-section {
+    width: 70%;
+    padding: 20px;
+}
+
+.tts-controls, .translation-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tts-controls label, .translation-section label {
+    margin-right: 10px;
+}
+
+.tts-controls select, .translation-section select {
+    margin-right: 15px;
+}
+
+.reading-area textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #ffffe0;
+    border: 1px solid #ddd;
+    min-height: 200px;
+    resize: none;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+#pageInfo {
+    margin: 0 10px;
+}
+
+/* Games Section */
+.games-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.games-section h2 {
+    color: #4e4e4e;
+    margin: 20px 0;
+}
+
+/* Game Button Styles */
+button {
+    padding: 12px 20px;
+    font-size: 1.2em;
+    margin: 10px;
+    color: white;
+    background-color: #6c63ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #5a54e0;
+    transform: translateY(-2px);
+}
+
+/* Word Scramble Game Styles */
+#wordScrambleGame {
+    display: none;
+    padding: 20px;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#wordScrambleGame h3 {
+    color: #333;
+}
+
+#wordScrambleGame h1 {
+    font-size: 3em;
+    margin: 20px 0;
+    color: #ff6f61; /* Highlight color */
+}
+
+#userGuess {
+    padding: 10px;
+    width: 50%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* Color Matching Game Styles */
+#colorMatchingGame {
+    display: none;
+    padding: 20px;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.color-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.color-options button {
+    width: 100px;
+    height: 50px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    transition: transform 0.2s;
+}
+
+.color-options button:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Animation for Card Flipping */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #f0f0f5;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.5s, background-color 0.5s;
+    position: relative;
+}
+
+.card.flipped {
+    background-color: #fff;
+    transform: rotateY(180deg);
+}
+
+.card.matched {
+    background-color: #4caf50;
+    color: white;
+    transition: background-color 0.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .customize-section,
+    .reading-section {
+        width: 100%;
+    }
+
+    .games-section {
+        flex-direction: column; /* Stack game sections on smaller screens */
+        align-items: center; /* Center align items */
+    }
+
+    .game-container {
+        width: 80%; /* Adjust width for smaller screens */
+        margin: 10px 0; /* Margin for spacing */
+    }
+
+    .color-options {
+        flex-direction: column;
+    }
+
+    .color-options button {
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engaging Games</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Engaging Games</h1>
+            <button onclick="window.location.href='/'">Back to Reader</button>
+        </header>
+
+        <div class="games-section">
+            <div class="game-container">
+                <h2>Word Scramble Game</h2>
+                <button class="start-game-btn" onclick="startWordScrambleGame()">Start Game</button>
+                <div id="wordScrambleGame" class="game-display" style="display:none;"></div>
+            </div>
+
+            <div class="game-container">
+                <h2>Color Matching Game</h2>
+                <button class="start-game-btn" onclick="startColorMatchingGame()">Start Game</button>
+                <div id="colorMatchingGame" class="game-display" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/games.js"></script>
+</body>
+</html>

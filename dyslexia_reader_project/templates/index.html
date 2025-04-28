@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyslexia Reader App</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Dyslexic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DyslexiaReader</h1>
+            <button class="games-button" onclick="window.location.href='/games'">🎮 Games</button>
+        </header>
+
+        <div class="main-content">
+            <div class="customize-section">
+                <h2>Customize Text</h2>
+                <label for="fontSize">Font Size:</label>
+                <input type="range" id="fontSize" min="12" max="48" value="16">
+                
+                <label for="lineSpacing">Line Spacing:</label>
+                <input type="range" id="lineSpacing" min="1" max="3" step="0.1" value="1.5">
+                
+                <label for="fontFamily">Font Family:</label>
+                <select id="fontFamily">
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                    <option value="Trebuchet MS">Trebuchet MS</option>
+                    <option value="Palatino Linotype">Palatino Linotype</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Segoe UI">Segoe UI</option>
+                    <option value="Open Sans">Open Sans</option>
+                    <option value="Roboto">Roboto</option>
+                    <option value="Droid Sans">Droid Sans</option>
+                    <option value="Arial Rounded MT Bold">Arial Rounded MT Bold</option>
+                    <option value="Open Dyslexic">Open Dyslexic</option> <!-- Dyslexia-friendly font -->
+                </select>
+
+                <label for="textColor">Text Color:</label>
+                <input type="color" id="textColor" value="#000000">
+
+                <label for="bgColor">Background Color:</label>
+                <input type="color" id="bgColor" value="#ffffff">
+
+                <div class="upload-section">
+                    <h3>Upload Book (PDF):</h3>
+                    <input type="file" id="fileUpload" accept=".pdf">
+                    <button onclick="uploadFile()">Upload and Extract</button>
+                </div>
+            </div>
+
+            <div class="reading-section">
+                <div class="tts-controls">
+                    <label for="voiceSelect">Choose Voice:</label>
+                    <select id="voiceSelect">
+                        <option value="en-US">Microsoft David - English (United States)</option>
+                        <option value="en-GB">Microsoft Hazel - English (UK)</option>
+                        <option value="hi-IN">Google Hindi - Hindi (India)</option>
+                    </select>
+
+                    <label for="speechSpeed">Speech Speed:</label>
+                    <input type="range" id="speechSpeed" min="0.5" max="2" step="0.1" value="1">
+                    <button id="playButton" onclick="playTextToSpeech()">▶️ Play</button>
+                    <button id="pauseButton" onclick="pauseSpeech()">⏸️ Pause</button>
+                    <button id="stopButton" onclick="stopSpeech()">⏹️ Stop</button>
+                </div>
+
+                <div class="translation-section">
+                    <label for="translateLang">Translate Text To:</label>
+                    <select id="translateLang">
+                        <option value="en">English</option>
+                        <option value="hi">Hindi</option>
+                        <option value="es">Spanish</option>
+                        <option value="ta">Tamil</option>
+                    </select>
+                    <button onclick="translateText()">Translate</button>
+                </div>
+
+                <div id="readingArea" class="reading-area">
+                    <textarea id="textOutput" rows="10" readonly></textarea>
+                </div>
+
+                <div class="pagination">
+                    <button id="prevPage" onclick="prevPage()" disabled>Previous Page</button>
+                    <span id="pageInfo">Page 1</span>
+                    <button id="nextPage" onclick="nextPage()">Next Page</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2024 DyslexiaReader. All rights reserved.</p>
+        </footer>
+
+        <script src="/static/js/script.js"></script>
+    </div>
+</body>
+</html>
